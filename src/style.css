@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto:wght@100&display=swap');
+
+body {
+  font-family: raleway;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.fundacion {
+  width: 400px;
+  /*ancho minimo*/
+  text-align: center;
+  background-color: #ededed;
+  border-radius: 10px 0px 0px 10px;
+  padding: 10px;
+}
+
+.tarjeta {
+  width: 400px;
+  background-color: #ddb900;
+  border-radius: 0px 10px 10px 0px;
+  padding: 10px;
+  text-align: center;
+}
+
+button {
+  border: solid 2px #454545;
+  background: #454545;
+  color: #ededed;
+  border-radius: 10px;
+  /*espacio entre el texto y el borde del botton*/
+  line-height: 2em;
+  cursor: pointer;
+  margin: auto;
+  transition: 1000ms;
+
+}
+
+button:hover {
+  background: #ededed;
+  color: #454545;
+  border: solid 2px #454545;
+  transition: 1000ms;
+
+}
+
+input {
+  background: #ededed;
+  border: none;
+  padding: 5px 10px 5px 10px;
+  color: #454545;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  /*separacion de abajo*/
+  border-radius: 4px;
+
+}
