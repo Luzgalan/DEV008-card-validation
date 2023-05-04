@@ -15,11 +15,17 @@
       <div class="fundacion">
         <h4>Dona a nuestra fundación</h4>
         <p>Somos una fundación sin fines de lucro y le brindamos refugio a nuestros amigos de cuatro patitas</p>
+        <img src="./img/logo.png" alt="">
       </div>
 
       <div class="tarjeta">
-        <input type="number" id="iptTarjeta">
-        <button onclick="validarTarjeta()">Validar</button>
+        <label for="">Número de tarjeta</label>
+        <input type="text" id="iptTarjeta">
+        <div class="bottones">
+          <button onclick="validarTarjeta()" id="btnValidar">Validar</button>
+          <button onclick="validarNuevaTarjeta()" style="display: none;" id="btnNuevo">Validar nueva tarjeta</button>
+        </div>
+
       </div>
 
     </div>
