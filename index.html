@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tarjeta de crédito válida</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header></header>
+  <main>
+
+    <div class="container info">
+      <div class="card claro">
+        <img src="./img/dona.jpeg" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h2><b>DONA</b></h2>
+        </div>
+      </div>
+      <div class="card obscuro">
+        <img src="./img/ayuda.jpeg" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h2><b>AYUDA</b></h2>
+        </div>
+      </div>
+      <div class="card claro">
+        <img src="./img/salva.jpeg" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h2><b>SALVA</b></h2>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="fundacion">
+        <h3>Dona a nuestra fundación</h3>
+        <img src="./img/logo.png" alt="">
+        <p>Somos una fundación sin fines de lucro y le brindamos refugio a nuestros amigos de cuatro patitas</p>
+
+      </div>
+
+      <div class="tarjeta">
+        <div class="centrar">
+          <p>Aceptamos tus donativos con las tarjetas de credito o debito.</p>
+          <h4>Valida tu tarjeta aquí!!!</h4>
+        </div>
+        <div id="tarjetaDefault" class="credit-card selectable tres" discover>
+          <br>
+          <div class="credit-card-last4">
+            ############2345
+          </div>
+          <br>
+          <br>
+        </div>
+        <div id="tipoTarjeta" class="credit-card selectable" style="display: none;">
+          <div id="numeroTarjeta" class="credit-card-last4">
+          </div>
+        </div>
+        <form action="" id="formTarjeta">
+          <label for="">Número de tarjeta</label>
+          <input type="text" name="iptTarjeta" id="iptTarjeta" required onkeypress="return /[0-9 ]/i.test(event.key)">
+          <div class="bottones">
+            <button onclick="validarTarjeta()" id="btnValidar">Validar</button>
+            <button onclick="validarNuevaTarjeta()" id="btnNuevo" style="display: none;">Validar nueva
+              tarjeta</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+
+  </main>
+  <footer></footer>
+  <script src="index.js" type="module"></script>
+</body>
+
+</html>
