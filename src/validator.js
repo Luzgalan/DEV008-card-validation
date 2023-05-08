@@ -37,7 +37,13 @@ const validator = {
   },
 
   obtenerFranquicia: function (creditCardNumber) {
-    let inicioTarjeta = creditCardNumber.substring(0, 2);
+    let inicioTarjeta = creditCardNumber.substring(0, 4);
+    if (
+      inicioTarjeta === "6011" 
+    ) {
+      return "Discover";
+    }
+    inicioTarjeta = creditCardNumber.substring(0, 2);
     if (
       inicioTarjeta === "51" ||
       inicioTarjeta === "52" ||
@@ -47,13 +53,11 @@ const validator = {
     ) {
       return "Mastercard";
     }
-    if (inicioTarjeta === "50") {
-      return "Carnet";
-    }
     inicioTarjeta = creditCardNumber.substring(0, 1);
-    if (inicioTarjeta === 4) {
+    if (inicioTarjeta === "4") {
       return "Visa";
     }
+    return 'Franquicia no definida'
   },
 };
 
