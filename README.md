@@ -86,4 +86,4 @@ Durante el desarrollo del proyecto se obtuvieron los siguientes conocimientos :
 > - Objetos
  
  ## Despliege
- El proyecto se desplegó en la plataforma de GitHub Pages y está disponible en el siguiente enlace.
+ El proyecto se desplegó en la plataforma de GitHub Pages y está disponible en el siguiente [enlace](https://luzgalan.github.io/DEV008-card-validation/).
