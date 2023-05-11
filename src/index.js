@@ -27,11 +27,11 @@ function validarTarjeta(event){
     }
     const mascara = validator.maskify(numero);
 
-    document.getElementById("numeroTarjeta").innerHTML = mascara;
+    document.getElementById("numeroTarjeta").innerHTML = mascara; //escribe la mascara en la tarjeta dinamica
     document.getElementById("tipoTarjeta").style.display = "block"; //muestra el tipo de tarjeta
     document.getElementById("iptTarjeta").value = mascara; //mandar un valor al htmls
-    document.getElementById("btnValidar").style.display = "none"; //oculte
-    document.getElementById("iptTarjeta").disabled = true; //habilita el input
+    document.getElementById("btnValidar").style.display = "none"; //oculte boton validar
+    document.getElementById("iptTarjeta").disabled = true; //deshabilita el input
     document.getElementById("btnNuevo").style.display = "block"; //muestra el boton
     document.getElementById("tarjetaDefault").style.display = "none"; //oculta la tarjeta
     // alert("tarjeta valida");
