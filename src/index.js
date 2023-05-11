@@ -10,6 +10,7 @@ function validarTarjeta(event){
     return;
   }
   const esValido = validator.isValid(numero);
+  
 
   let franquicia;
   if (esValido) {
@@ -17,35 +18,46 @@ function validarTarjeta(event){
 
     switch (franquicia) {
     case "Visa":
-      document.getElementById("tipoTarjeta").classList.add("visa");
+      document.getElementById("tarjetaDinamica").classList.add("visa");
       break;
     case "Mastercard":
-      document.getElementById("tipoTarjeta").classList.add("mastercard");
+      document.getElementById("tarjetaDinamica").classList.add("mastercard");
+      break;
+    case "Discover":
+      document.getElementById("tarjetaDinamica").classList.add("discover");
       break;
     default:
       break;
     }
+    
     const mascara = validator.maskify(numero);
 
     document.getElementById("numeroTarjeta").innerHTML = mascara; //escribe la mascara en la tarjeta dinamica
-    document.getElementById("tipoTarjeta").style.display = "block"; //muestra el tipo de tarjeta
     document.getElementById("iptTarjeta").value = mascara; //mandar un valor al htmls
-    document.getElementById("btnValidar").style.display = "none"; //oculte boton validar
     document.getElementById("iptTarjeta").disabled = true; //deshabilita el input
+
+    document.getElementById("tarjetaDinamica").style.display = "block"; //muestra el tipo de tarjeta
     document.getElementById("btnNuevo").style.display = "block"; //muestra el boton
+
+    document.getElementById("btnValidar").style.display = "none"; //oculte boton validar
     document.getElementById("tarjetaDefault").style.display = "none"; //oculta la tarjeta
-    // alert("tarjeta valida");
+
+   
+    
   } else {
     alert("Tarjeta no valida");
   }
 }
+//manupulacion del don
 
 window.validarNuevaTarjeta = function () {
-  document.getElementById("btnNuevo").style.display = "none";//oculta el boton
-  document.getElementById("btnValidar").style.display = "block";//muestra el boton validar
   document.getElementById("iptTarjeta").value = ""; 
   document.getElementById("iptTarjeta").disabled = false; //habilita el input
   document.getElementById("iptTarjeta").focus(); //coloca el cursor en el input
-  document.getElementById("tipoTarjeta").style.display = "none";
+
+  document.getElementById("btnNuevo").style.display = "none";//oculta el boton
+  document.getElementById("tarjetaDinamica").style.display = "none";
+
+  document.getElementById("btnValidar").style.display = "block";//muestra el boton validar
   document.getElementById("tarjetaDefault").style.display = "block"; //mostrar la tarjeta
 };
