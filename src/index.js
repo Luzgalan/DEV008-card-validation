@@ -1,12 +1,10 @@
 import validator from "./validator.js";
 
-//Prevenir que la pagina recarge 
-const form = document.getElementById("formTarjeta");
-form.addEventListener('submit', handleForm)
+//Agregar el evento submit a form
+document.getElementById("formTarjeta").addEventListener('submit', validarTarjeta)
 
-function handleForm(event) { event.preventDefault(); } 
-
-window.validarTarjeta = function () {
+function validarTarjeta(event){
+  event.preventDefault();//Previene el evento predeterminado del submit
   const numero = document.getElementById("iptTarjeta").value; //traer un valor al html
   if(numero === ''){
     return;
@@ -28,6 +26,7 @@ window.validarTarjeta = function () {
       break;
     }
     const mascara = validator.maskify(numero);
+
     document.getElementById("numeroTarjeta").innerHTML = mascara;
     document.getElementById("tipoTarjeta").style.display = "block"; //muestra el tipo de tarjeta
     document.getElementById("iptTarjeta").value = mascara; //mandar un valor al htmls
@@ -39,12 +38,12 @@ window.validarTarjeta = function () {
   } else {
     alert("Tarjeta no valida");
   }
-};
+}
 
 window.validarNuevaTarjeta = function () {
-  document.getElementById("btnNuevo").style.display = "none";
-  document.getElementById("btnValidar").style.display = "block";
-  document.getElementById("iptTarjeta").value = "";
+  document.getElementById("btnNuevo").style.display = "none";//oculta el boton
+  document.getElementById("btnValidar").style.display = "block";//muestra el boton validar
+  document.getElementById("iptTarjeta").value = ""; 
   document.getElementById("iptTarjeta").disabled = false; //habilita el input
   document.getElementById("iptTarjeta").focus(); //coloca el cursor en el input
   document.getElementById("tipoTarjeta").style.display = "none";
