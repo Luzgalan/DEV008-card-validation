@@ -46,24 +46,28 @@
           <p>Aceptamos tus donativos con las tarjetas de credito o debito.</p>
           <h4>Valida tu tarjeta aquí!!!</h4>
         </div>
-        <div id="tarjetaDefault" class="credit-card selectable tres" discover>
+        <!-- ------------------------- tarjeta por default ------------------------- -->
+        <div id="tarjetaDefault" class="credit-card selectable">
           <br>
-          <div class="credit-card-last4">
-            ############2345
+          <div class="credit-card-texto">
+            0000000000000000
+            <img src="img/visa.png" class="imgicon" alt="" align="right">
+            <img src="img/mastercard.png" class="imgicon" alt="" align="right">
+            <img src="img/discover.png " class="imgicon" alt="" align="right">
           </div>
-          <br>
-          <br>
         </div>
+        <!-- -------------------------- tarjeta dinamica --------------------------- -->
         <div id="tipoTarjeta" class="credit-card selectable" style="display: none;">
-          <div id="numeroTarjeta" class="credit-card-last4">
+          <div id="numeroTarjeta" class="credit-card-texto">
           </div>
         </div>
-        <form action="" id="formTarjeta">
+
+        <form action="" id="formTarjeta" autocomplete="off">
           <label for="">Número de tarjeta</label>
           <input type="text" name="iptTarjeta" id="iptTarjeta" required onkeypress="return /[0-9 ]/i.test(event.key)">
           <div class="bottones">
-            <button onclick="validarTarjeta()" id="btnValidar">Validar</button>
-            <button onclick="validarNuevaTarjeta()" id="btnNuevo" style="display: none;">Validar nueva
+            <button type="submit" id="btnValidar">Validar</button>
+            <button type="button" onclick="validarNuevaTarjeta()" id="btnNuevo" style="display: none;">Validar nueva
               tarjeta</button>
           </div>
 
