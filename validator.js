@@ -22,8 +22,8 @@ const validator = {
     }
 
     let suma = 0;
-    arrayTarjeta.forEach((numero) => {
-      suma = suma + parseInt(numero, 10);
+    arrayTarjeta.forEach((posicion) => {
+      suma = suma + parseInt(posicion, 10);
     });
     return suma % 10 === 0 ? true : false;
   },
